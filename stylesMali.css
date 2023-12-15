@@ -1,0 +1,311 @@
+body{
+    background-color: rgb(141, 139, 139);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    /*margin: 0;*/
+}
+
+.caja{
+    width: 1200px;;
+    background-color: rgb(66, 66, 87);
+    height: 600px;
+}
+
+.pantalla{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    height: 300px;
+    background-color: rgb(40, 40, 64);
+    margin: 30px;
+
+}
+
+.logo{
+    width: 300px;
+    height: 100px;
+    background-color: none;
+    margin-left: 870px;
+    margin-top: -310px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 50px;
+}
+
+.tituloGrande{
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+.dinero{
+    width: 300px;
+    height: 25px;
+    background-color: rgb(0, 0, 0);
+    margin-left: 870px; 
+    margin-top: 10px;
+    margin-bottom: 175px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.verde{
+    width: 275px;
+    height: 10px;
+    background-color: rgb(76, 203, 99);
+}
+
+.azul{
+    width:750px;
+    height: 250px;
+    background-color:rgb(44, 187, 223);
+}
+
+.teclado{
+    width: 400px;
+    height: 210px;
+    background-color: rgb(40, 40, 64);
+    display: flex;
+    margin-left: 100px;
+}
+
+.tecla1{
+    width: 120px;
+    height: 38px;
+    background-color: silver;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 10px ;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.tecla2{
+    width: 120px;
+    height: 38px;
+    background-color: silver;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.tecla3{
+    width: 120px;
+    height: 38px;
+    background-color: silver;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.tecla4{
+    width: 120px;
+    height: 38px;
+    background-color: silver;
+    border-radius: 5px;
+    margin-top: 60px;
+    margin-left: -380px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.tecla5{
+    width: 120px;
+    height: 38px;
+    background-color: silver;
+    border-radius: 5px;
+    margin-top: 60px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.tecla6{
+    width: 120px;
+    height: 38px;
+    background-color: silver;
+    border-radius: 5px;
+    margin-top: 60px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.tecla7{
+    width: 120px;
+    height: 38px;
+    background-color: silver;
+    border-radius: 5px;
+    margin-top: 110px;
+    margin-left: -380px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.tecla8{
+    width: 120px;
+    height: 38px;
+    background-color: silver;
+    border-radius: 5px;
+    margin-top: 110px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.tecla9{
+    width: 120px;
+    height: 40px;
+    background-color: silver;
+    border-radius: 5px;
+    margin-top: 110px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.tecla0{
+    width: 120px;
+    height: 38px;
+    background-color: silver;
+    border-radius: 5px;
+    margin-top: 160px;
+    margin-left: -250px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.botones{
+    width: 200px;
+    height: 210px;
+    background-color: rgb(40, 40, 64);
+    display: flex;
+    margin-left: 550px;
+    margin-top: -210px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.botonRetirar{
+    /*Retirar*/
+    width: 170px;
+    height: 50px;
+    background-color:red;
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.botonConsultar{
+    /*Consultar saldo*/
+    width: 170px;
+    height: 50px;
+    background-color: yellow;
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.botonDepositar{
+    /*Depositar*/
+    width: 170px;
+    height: 50px;
+    background-color: green;
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-family: 'Courier New', monospace;
+}
+
+form{
+    /*text-align: center;*/
+    justify-content: center;
+    font-family: 'Courier New', monospace ;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    /*max-width: 200px;*/
+}
+
+section form input{
+    width: 200px;
+    border-radius: 5px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+}
+
+.tarjeta{
+    width: 250px;
+    height: 80px;
+    background-color: silver;
+    margin-left: 895px;
+    margin-top: -300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.tarjetaArriba{
+    width: 100px;
+    height: 10px;
+    background-color: gray;
+    justify-content: center;
+    display: flex;
+}
+
+.lineaColor{
+    width: 80px;
+    height: 2px;
+    background-color: orange;
+    margin-top: 8px;
+}
+
+.tarjetaAbajo{
+    width: 200px;
+    height: 20px;
+    background-color: gray;
+    justify-content: center;
+    display: flex;
+}
+
+.lineaColor2{
+    width: 80px;
+    height: 120px;
+    background-color: orange;
+    margin-top: 0px;
+}
+
+.miNombre{
+    margin-top: 650px;
+    margin-left: -200px;
+}
