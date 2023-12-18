@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
-    <link rel="stylesheet" href="stylesMali.css">
+    <link rel="stylesheet" href="stylesUsuarios.css">
 </head>
 <body>
     <div class="caja">
@@ -14,7 +14,58 @@
             <div class="azul">
                 <section>
                     <h1 class="titulo">Bienvenida Mali</h1>
-                    <h1>Saldo: 200</h1>
+                    <h1 style="display: flex;justify-content: center;"> Por favor, seleccióne la operación que quiere realizar</h1>
+
+                    <div id="Vnv" class="hidden">
+                        <div style="margin-bottom: 15px;">
+                            Cantidad a retirar:
+                        </div>
+
+                        <input type="number" style="margin-bottom: 15px;" min="1" max="990" id="Car">
+
+                        <button id="Confirmar" onclick="functionConfirmarR()">
+                            Confirmar
+                        </button>
+
+                        <button class="regresord" onclick="menuPrincR()">
+                            Regresar al menu principal
+                        </button>
+                    </div>
+
+                    <div id="Cs" class="hidden">
+                        <div style="margin-bottom: 15px;">
+                            Saldo total:
+                        </div>
+
+                        <input type="button" style="margin-bottom: 15px;" id="inputSaldo">
+
+                        <button onclick="menuPrinc()">
+                            Regresar al menu principal
+                        </button>
+                    </div>
+
+                    <div id="Dep" class="hidden">
+                        <div style="margin-bottom: 15px;">
+                            Cantidad a depositar:
+                        </div>
+
+                        <input type="number" style="margin-bottom: 15px;" min="1" max="990" id="Cad">
+
+                        <button class="Confirmar" onclick="functionConfirmarD()">
+                            Confirmar
+                        </button>
+
+                        <button class="regresord" onclick="menuPrincD()">
+                            Regresar al menu principal
+                        </button>
+                    </div>
+
+                    <div style="display: flex;justify-content: center; margin-top: 60px;">
+                        <button id="bds" class="visible" onclick="salir()">
+                            Salir de mi cuenta
+                        </button>
+                    </div>
+
                 </section>
             </div>
         </div>
@@ -73,17 +124,17 @@
         </div>
 
         <div class="botones">
-            <div class="botonRetirar">
+            <button class="botonRetirar" name="Retirar" id="R" onclick="functionRetirar()">
                 <p>RETIRAR</p>
-            </div>
+            </button>
 
-            <div class="botonConsultar">
+            <button class="botonConsultar" onclick="functionConsultar()">
                 <p>CONSULTAR</p>
-            </div>
+            </button>
 
-            <div class="botonDepositar">
+            <button class="botonDepositar" onclick="functionDepositar()">
                 <p>DEPOSITAR</p>
-            </div>
+            </button>
         </div>
 
         <div class="tarjeta">
@@ -107,6 +158,158 @@
         <p>Luis Daniel Acevedo Herrera</p>
     </div>
 
-    <script src="registro.js"></script>
+    <script>
+        var conta=0;
+        var saldo=200;
+
+        document.getElementById('inputSaldo').value=saldo;
+        
+        function functionRetirar() {
+        var elemento = document.getElementById("Vnv");
+        if (elemento.classList.contains("hidden") && conta==0) {
+                elemento.classList.remove("hidden");
+                elemento.classList.add("visible");
+                conta++;
+            } /*else {
+                elemento.classList.remove("visible");
+                elemento.classList.add("hidden");
+            }*/
+
+        var elemento1 = document.getElementById("bds");
+        if (elemento1.classList.contains("visible")) {
+                elemento1.classList.remove("visible");
+                elemento1.classList.add("hidden");
+            }
+    }
+
+        function functionConsultar(){
+            var elemento = document.getElementById("Cs");
+        if (elemento.classList.contains("hidden") && conta==0) {
+                elemento.classList.remove("hidden");
+                elemento.classList.add("visible");
+                conta++;
+            }
+
+            var elemento1 = document.getElementById("bds");
+        if (elemento1.classList.contains("visible")) {
+                elemento1.classList.remove("visible");
+                elemento1.classList.add("hidden");
+            }
+        }
+
+        function functionDepositar(){
+            var elemento = document.getElementById("Dep");
+        if (elemento.classList.contains("hidden") && conta==0) {
+                elemento.classList.remove("hidden");
+                elemento.classList.add("visible");
+                conta++;
+            }
+
+            var elemento1 = document.getElementById("bds");
+        if (elemento1.classList.contains("visible")) {
+                elemento1.classList.remove("visible");
+                elemento1.classList.add("hidden");
+            }
+        }
+
+        function functionConfirmarR(){
+                var resta = parseInt(document.getElementById('Car').value);
+                
+                if((saldo-resta)>9 && (resta!==null) && (resta>0)){
+                saldo = saldo-resta;
+                document.getElementById('inputSaldo').value = saldo;
+                console.log(resta);
+                console.log(saldo);
+
+                /*var elementoR = document.getElementById("Vnv");
+                elementoR.classList.remove("visible");
+                elementoR.classList.add("hidden");
+                conta--;
+
+                var elemento2 = document.getElementById("bds");
+                if (elemento2.classList.contains("hidden")) {
+                elemento2.classList.remove("hidden");
+                elemento2.classList.add("visible");
+                }*/
+                alert(`Se retiro: $` + resta + ("\n") + `El saldo actual es: $` + saldo)
+
+                document.getElementById('Car').value = null
+            }else{
+                document.getElementById('Car').value = null
+                alert(`La cantidad ingresada no se puede retirar porque es inferior al limite de $10, no es un valor permitido o no se ingreso ningun valor.` + ("\n") + ("\n") + `Por favor intentelo de nuevo`)
+            }
+        }
+
+        function functionConfirmarD(){
+            var suma = parseInt(document.getElementById('Cad').value);
+                
+                if((saldo+suma)<991 && (suma!==null) && (suma>0)){
+                saldo = saldo+suma;
+                document.getElementById('inputSaldo').value = saldo;
+                console.log(suma);
+                console.log(saldo);
+
+                /*var elementoR = document.getElementById("Dep");
+                elementoR.classList.remove("visible");
+                elementoR.classList.add("hidden");
+                conta--;
+
+            var elemento2 = document.getElementById("bds");
+                if (elemento2.classList.contains("hidden")) {
+                elemento2.classList.remove("hidden");
+                elemento2.classList.add("visible");
+                }*/ 
+                alert(`Se deposito: $` + suma + ("\n") + `El saldo actual es: $` + saldo)
+                document.getElementById('Cad').value = null  
+            }else{
+                document.getElementById('Cad').value = null
+                alert(`La cantidad ingresada no se puede depositar porque excede el límite de $990, no es un valor permitido o no se ingreso ningun valor.` + ("\n") + ("\n") +  `Por favor intentelo de nuevo`)
+            }
+        }
+         
+         function menuPrinc(){
+            var elementoR = document.getElementById("Cs");
+                elementoR.classList.remove("visible");
+                elementoR.classList.add("hidden");
+                conta--;
+
+                var elemento2 = document.getElementById("bds");
+                if (elemento2.classList.contains("hidden")) {
+                elemento2.classList.remove("hidden");
+                elemento2.classList.add("visible");
+            }
+         }
+
+         function menuPrincR(){
+            var elementoR = document.getElementById("Vnv");
+                elementoR.classList.remove("visible");
+                elementoR.classList.add("hidden");
+                conta--;
+
+                var elemento2 = document.getElementById("bds");
+                if (elemento2.classList.contains("hidden")) {
+                elemento2.classList.remove("hidden");
+                elemento2.classList.add("visible");
+            }
+         }
+
+         function menuPrincD(){
+            var elementoR = document.getElementById("Dep");
+                elementoR.classList.remove("visible");
+                elementoR.classList.add("hidden");
+                conta--;
+
+                var elemento2 = document.getElementById("bds");
+                if (elemento2.classList.contains("hidden")) {
+                elemento2.classList.remove("hidden");
+                elemento2.classList.add("visible");
+            }
+         }
+
+         function salir(){
+            window.location.href = `index.html`
+         }
+
+    </script>
 </body>
 </html>

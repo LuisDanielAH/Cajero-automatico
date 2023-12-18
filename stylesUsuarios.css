@@ -309,3 +309,19 @@ section form input{
     margin-top: 650px;
     margin-left: -200px;
 }
+
+.hidden{
+    display: none
+}
+
+.visible{
+    justify-content:center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.regresord{
+    display: flex;
+    margin-top: 10px;
+}

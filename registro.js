@@ -3,9 +3,9 @@ loginForm.addEventListener('submit',(e)=>{
     e.preventDefault()
 
     const users = [
-        { email: 'mali@correo.com', password: 'contraseña1', name: 'Mali' },
-        { email: 'gera@correo.com', password: 'contraseña2', name: 'Gera' },
-        { email: 'maui@correo.com', password: 'contraseña3', name: 'Maui' }
+        { email: 'mali@correo.com', password: 'contraseña1', name: 'Mali', saldo:200 },
+        { email: 'gera@correo.com', password: 'contraseña2', name: 'Gera', saldo:290 },
+        { email: 'maui@correo.com', password: 'contraseña3', name: 'Maui', saldo:67 }
       ];
       
       // Guardar el arreglo en el localStorage
@@ -21,5 +21,23 @@ loginForm.addEventListener('submit',(e)=>{
     alert(`Bienvenido ${validUser.name}`)
     window.location.href = `${validUser.name}.html`
 
+    /*function functionRetirar() {
+        console.log("Función ejecutada");
+        document.getElementById('Vnv').classList.toggle('visible');
+    }
+
+    function visible(){
+    document.addEventListener('DOMContentLoaded', function () {
+        // Esperar a que el DOM esté completamente cargado
+    
+        const miElemento = document.getElementById('Vnv');
+        const miBoton = document.getElementById('R');
+    
+        miBoton.addEventListener('click', function () {
+            // Cambiar la clase al hacer clic en el botón
+            miElemento.classList.toggle('visible');
+        });
+    });
+    }*/
 
 })
